@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: #667db6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          text-align: center;
+          font-family: Verdana;
+        }
+        h1{
+            color: white;
+            margin-top: 15px;
+        }
+        form{ 
+            background-color: #fff;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+
+        }
+        .form-control{
+            display: block;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .form-control label{
+            display: block;
+            margin-bottom: 10px;
+        }
+        span{
+            color: red;
+        }
+
+        .form-control input,
+        .form-control select,
+        .form-control textarea{
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+
+        .form-control input [type="radio"],
+        .form-control input [type="textarea"]{
+            display: inline-block;
+            width: auto;
+        }
+
+        button {
+            background-color: #7dc3f1;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        @media only screen and (max-width: 600px){
+            h1{
+            color: white;
+            margin-top: 15px;
+            font-size: 1.2em;
+        }
+
+        form{ 
+            background-color: #fff;
+            max-width: 300px;
+            margin: 25px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+
+        }
+
+        .form-control{
+            display: block;
+            margin-bottom: 25px;
+            text-align: left;
+            font-size:small;
+            size:40%;
+        }
+
+        .form-control input,
+        .form-control select,
+        .form-control textarea{
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            font-size: small;
+            display: block;
+            width: 95%;
+        }
+
+        button {
+            background-color: #7dc3f1;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: white;
+            font-size: small;
+            padding: 5px;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Geeks for Geeks Survey Form</h1>
+
+    <!-- create form -->
+    <form id="form">
+      
+        <div class="form-control">
+            <label for="name" id="label-name">Name<span>*</span></label>
+            <input type="text" id="label-name" placeholder="Enter your name">
+        </div>
+        
+        <div class="form-control">
+            <label for="email" id="label-email">Email<span>*</span></label>
+            <input type="text" id="label-email" placeholder="Enter your email">
+        </div>
+
+        <div class="form-control">
+            <label for="age" id="label-age">Age<span>*</span></label>
+            <input type="text" id="label-age" placeholder="Enter you age">
+        </div>
+
+        <div class="form-control">
+            <label for="select" id="label-select">Which option best describes you?</label>
+            <select name="select" id="label-select">
+                <option value="Student">Student</option>
+                <option value="intern">Intern</option>
+                <option value="pro">Professional</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+          <label>
+            Would you recommend GeeksForGeeks to your friend?
+          </label>
+
+          <label for="yes" id="label-yes">
+            <input type="radio" id="label-yes">
+            Yes
+        </label>
+
+        <label for="no" id="label-no"></label>
+            <input type="radio" id="label-no">
+            No
+        </label>
+
+        <label for="yes" id="label-maybe"></label>
+            <input type="radio" id="label-maybe">
+            Maybe
+        </label>
+        </div>
+
+        <div class="form-control">
+            <label>
+                Languages and Frameworks known
+                <small>(Check all that applly)</small>
+            </label>
+
+            <label for="i1" id="i1">
+                <input type="checkbox" name="i1" id="i1">C
+            </label>
+
+            <label for="i2" id="i2">
+                <input type="checkbox" name="i2" id="i2">C++
+            </label>
+
+            <label for="i3" id="i3">
+                <input type="checkbox" name="i3" id="i3">Java
+            </label>
+
+            <label for="i4" id="i4">
+                <input type="checkbox" name="i4" id="i4">C#
+            </label>
+
+            <label for="i5" id="i5">
+                <input type="checkbox" name="i5" id="i5">Python
+            </label>
+
+            <label for="i6" id="i6">
+                <input type="checkbox" name="i6" id="i6">JavaScript
+            </label>
+
+            <label for="i7" id="i7">
+                <input type="checkbox" name="i7" id="i7">React
+            </label>
+
+            <label for="i9" id="i9">
+                <input type="checkbox" name="i9" id="i9">Angular
+            </label>
+
+            <label for="i10" id="i10">
+                <input type="checkbox" name="i10" id="i10">Django
+            </label>
+
+            <label for="i11" id="i11">
+                <input type="checkbox" name="i11" id="i11">Spring
+            </label>
+        </div>
+
+        <div class="form-control">
+            <label for="comments" id="label-comment">
+                Any comment or suggestions 
+            </label>
+            <textarea name="comments" id="label-comment" placeholder="Enter your comment here"></textarea>
+        </div>
+
+        <button type="submit" value="submit">Submit</button>
+    </form>
+</body>
+</html>
